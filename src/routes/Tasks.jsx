@@ -46,8 +46,5 @@ function canObtainByRotation(str1, str2) {
     return concatenatedStr.includes(str2);
 }
 
-// Example usage:
 console.log(canObtainByRotation("abc", "cab"));
 console.log(canObtainByRotation("abc", "bca")); 
-console.log(canObtainByRotation("abc", "bac"));
-console.log(canObtainByRotation("hello", "lohel")); 

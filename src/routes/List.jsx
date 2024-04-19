@@ -1,14 +1,22 @@
-import React from 'react'
+// List.js
+import React, { useContext } from 'react';
+import { AppContext } from '../App';
 
 export default function List() {
+  const { state } = useContext(AppContext);
 
-  const combinedArray = useContext(CombinedArrayContext);
-
-
-
-
-  return <div>
-    <h1> name  </h1>
-    <h3> body </h3>
-  </div>
+  return (
+    <div>
+      <h1>List of Combined Elements</h1>
+      <ul>
+        {state && state.map((item, index) => (
+          <li key={index}>
+            <span>Name: {item.name}</span>
+            <span>Body: {item.body}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 }
+
