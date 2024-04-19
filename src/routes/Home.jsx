@@ -7,7 +7,6 @@ import { AppContext } from '../App';
 
 export const Home = () => {
   const { setState } = useContext(AppContext);
-  const [bothArray, setBothArray] = useState([]);
 
   function combineUnique(arr1, arr2) {
     const combinedArray = [];
@@ -42,7 +41,6 @@ export const Home = () => {
 
   useEffect(() => {
     const combined = combineUnique(Array1, Array2);
-    setBothArray(combined);
     setState(combined);
   }, []);
 
